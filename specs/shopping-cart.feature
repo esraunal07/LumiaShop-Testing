@@ -1,13 +1,37 @@
-Feature: Shopping Cart
-As a user, I should be able to add and remove items from the shopping cart and change the number of items.
+Feature: Add to cart
+  As a user I want to be able to add products
+  to the cart, so that I can buy them.
 
-  Scenario: User adds a product to the shopping cart
-    Given the user is on the main page 
-    When  the user adds the product to the shopping cart
-    Then  the cart should contain the product "<Product>"
+  Background:
+    Given that I am on the home page
 
-  Scenario: The user changes the number of products in the shopping cart
-    When the user increases the number of the product "<Product>" to 3
-    Then the shopping cart should contain 3 of the product "<Product>"
+  Scenario: Adding "1" "Bordslampa" to the cart
+    Given that I am on the start page
+    And that I have searched for "Bordslampa"
+    When I click the buy button "1" time
+    Then "1" "Bordslampa" should be added to the cart
 
+  Scenario: Adding "2" "Bordslampa" to the cart
+    Given that I am on the start page
+    And that I have searched for "Bordslampa"
+    When I click the buy button "2" time
+    Then "2" "Bordslampa" should be added to the cart
+
+  Scenario: Adding "1" "Golvlampa" to the cart
+    Given that I am on the start page
+    And that I have searched for "Golvlampa"
+    When I click the buy button "1" time
+    Then "1" "Golvlampa" should be added to the cart
+
+  Scenario: Adding "3" "Golvlampa" to the cart
+    Given that I am on the start page
+    And that I have searched for "Golvlampa"
+    When I click the buy button "3" time
+    Then "3" "Golvlampa" should be added to the cart
+
+  Scenario: Adding "7" "Taklampa" to the cart
+    Given that I am on the start page
+    And that I have searched for "Taklampa"
+    When I click the buy button "7" time
+    Then "7" "Taklampa" should be added to the cart
  

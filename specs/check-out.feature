@@ -3,7 +3,7 @@ Feature: Checkout info
 
   Background:
     Given that I am on the start page
-    And that I have clicked the Gå till kassan button "1" time
+    And that I have clicked the Gå till kassan button 
 
   Scenario: Inserting name into the name field
     
